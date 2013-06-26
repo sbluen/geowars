@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!--Steven Bluen, group G3-->
+<project name="Space Invaders" basedir="." default="clean-build">
+
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="dist"/>
+	<property name="rsrc.dir"    value="resources"/>
+    <property name="main-class"  value="main.gameUI.Game"/>
+
+
+	
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${jar.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+    	<mkdir dir="${classes.dir}/${rsrc.dir}"/>
+        <copy todir="${classes.dir}/${rsrc.dir}">
+           <fileset dir="resources/${rsrc.dir}" >
+              <include name="*.*"/>
+           </fileset>
+        </copy>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+    </target>
+
+    <target name="archive" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="archive">
+        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+    </target>
+
+    <target name="clean-build" depends="clean,archive"/>
+	
+  	<target name="javadocs" depends="compile" >
+  	  <mkdir dir="build/javadocs"/>
+  	  <javadoc author="true"
+   	  	destdir="build/javadocs"
+ 	  	packagenames="main.*" 
+   	  	sourcepath="src"
+  	  	link="http://java.sun.com/j2se/1.5.0/docs/api/"
+ 	  />
+  	    <condition property="condition">
+  	    	<os family="windows"/>
+  	    </condition>
+
+	  	  <exec executable="cmd">
+	        <arg value="/k"/>
+	        <arg value='cd build/javadocs&amp;&amp;index.html'/>
+	      </exec>
+    </target>
+    
+    <target name="main" depends="clean,run"/>
+</project>
