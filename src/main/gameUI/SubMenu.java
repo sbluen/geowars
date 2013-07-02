@@ -26,6 +26,7 @@ import main.gameData.PlayerInfo;
  * @author Yunsik Choi and Steven Bluen, group G3
  *
  */
+@SuppressWarnings("serial")
 public class SubMenu extends JComponent implements ActionListener, ItemListener{ 	
 	/* Dimension */
 	private final int WIDTH = 800, HEIGHT = 100;

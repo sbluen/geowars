@@ -2,7 +2,6 @@ package main.entities;
 
 import java.awt.Canvas;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 
 /**This is not a real enemy, only an Enemy because that's the easiest
  * way to implement this.

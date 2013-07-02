@@ -16,7 +16,7 @@ public abstract class Entity {
 	/**Velocity variable.*/
 	protected double vx, vy, vtheta; //velocity
 	/**The sprite that this entity is to be drawn with.*/
-	protected Look look;
+	protected View look;
 	/**A rectangle around this object, used for collision checking.*/
 	protected Rectangle thisRec = new Rectangle();
 	

@@ -17,8 +17,8 @@ import javax.imageio.ImageIO;
  *  
  *  @author Kevin Glass, at http://www.cokeandcode.com/node/6
  */
-public class LookManager {
-	private HashMap looks = new HashMap();
+public class ViewManager {
+	private HashMap<String, View> views = new HashMap<String, View>();
 	
 	/**Builds a sprite (Look class) from the image.
 	 * 
@@ -26,9 +26,9 @@ public class LookManager {
 	 * @param canvas the canvas on which the image is to be drawn
 	 * @return the sprite that the image is to be stored with
 	 */
-	public Look getLook(String refer, Canvas canvas){
-		if(looks.get(refer)!=null)
-			return (Look)looks.get(refer);
+	public View getLook(String refer, Canvas canvas){
+		if(views.get(refer)!=null)
+			return views.get(refer);
 		BufferedImage srcImage = null;
 		URL url = null;
 		
@@ -56,8 +56,8 @@ public class LookManager {
 		/** first create a graphic for drawing the source image to an off-screen image.
 		 * draw the source image to the off-screen image. */
 		image.getGraphics().drawImage(srcImage, 0, 0, null);
-		Look look = new Look(image, canvas);
-		looks.put(refer, look);
-		return look;
+		View view = new View(image, canvas);
+		views.put(refer, view);
+		return view;
 	}
 }

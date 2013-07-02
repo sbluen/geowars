@@ -44,7 +44,7 @@ public class Missile extends Entity{
 			refer = "";
 		}
 		
-		look = new LookManager().getLook(refer, c);
+		look = new ViewManager().getLook(refer, c);
 		this.x = x;
 		this.y = y;
 		this.vy = vy;

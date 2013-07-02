@@ -36,6 +36,7 @@ import main.entities.PowerUp;
  *  @author Kevin Glass, at http://www.cokeandcode.com/node/6,
  *  and heavily modified by Daryl Hennegan, and Yunsik Choi, group G3
  */
+@SuppressWarnings("serial")
 public class Game extends Canvas implements KeyListener, MouseInputListener{ 
 	
 	/* Dimensions of game, sub-menu, and frame */
@@ -365,15 +366,6 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 			numOfEnemies = 100;
 		}
 		
-		/*
-		//remove missiles
-		for(int i=0; i<entities.size(); i++){
-			Entity entity = entities.get(i);
-			if(entity instanceof Missile)
-				removeEntity(entity); //to be removed inside the game loop
-		}
-		*/
-		
 		/* Add enemies into the vector (entities) */
 		double x, y, vx, vy;
 		int choice = 0;  //choice of enemy type
@@ -504,28 +496,6 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 					player.getX(), player.getY(), this, 
 					(missileSpeed*Math.sin(player.getTheta()))
 					, missileSpeed*Math.cos(player.getTheta()), player.getTheta());
-
-		/*
-		if(mouseX > player.getX() && mouseY < player.getY()){ //mouse is in quadrant 1 relative to player
-			missile.setVX(missile.getVX());
-			missile.setVY(-missile.getVY());
-		}	
-		else
-		if(mouseX < player.getX() && mouseY < player.getY()){ //mouse is in quadrant 2 relative to player
-			missile.setVX(-missile.getVX());
-			missile.setVY(-missile.getVY());
-		}
-		else
-		if(mouseX < player.getX() && mouseY > player.getY()){ //mouse is in quadrant 3 relative to player
-				missile.setVX(-missile.getVX());
-				missile.setVY(missile.getVY());	
-		}
-		else
-			if(mouseX > player.getX() && mouseY > player.getY()){ //mouse is in quadrant 4 relative to player
-				missile.setVX(missile.getVX());
-				missile.setVY(missile.getVY());
-		}
-		*/
 		
 		entities.add(missile);
 		shootingSound.play();

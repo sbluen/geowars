@@ -12,7 +12,7 @@ import java.awt.geom.AffineTransform;
  * @author Kevin Glass, at http://www.cokeandcode.com/node/6, 
  * with additions by Steven Bluen, group G3
  */
-public class Look {
+public class View {
 	private Image image;
 	private Canvas canvas; 
 	
@@ -21,7 +21,7 @@ public class Look {
 	 * @param image the image to draw
 	 * @param canvas the canvas on which the image is to be drawn
 	 */
-	public Look(Image image, Canvas canvas){
+	public View(Image image, Canvas canvas){
 		this.image = image;
 		this.canvas = canvas;
 	}

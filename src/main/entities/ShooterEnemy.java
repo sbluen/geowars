@@ -57,7 +57,7 @@ public class ShooterEnemy extends Enemy{
 		
 		missile_canvas = canvas;
 		
-		look = new LookManager().getLook(refer, canvas);
+		look = new ViewManager().getLook(refer, canvas);
 		this.target = target;
 		
 		

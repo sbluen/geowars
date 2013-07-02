@@ -1,7 +1,6 @@
 package main.entities;
 
 import java.awt.Canvas;
-import java.awt.event.MouseEvent;
 
 /** This is the object that represents the player's ship.
  *  The player will interact with the game world through this object. 
@@ -15,7 +14,7 @@ public class Player extends Entity {
 	 *
 	 */
 	public Player(String refer, double x, double y, Canvas canvas){
-		look = new LookManager().getLook(refer, canvas);
+		look = new ViewManager().getLook(refer, canvas);
 		this.x = x;
 		this.y = y;
 	}

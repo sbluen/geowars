@@ -29,7 +29,7 @@ public class Enemy extends Entity {
 	 */
 	public Enemy(double x, double y, Canvas canvas,
 			double vx, double vy, double maxSpeed, int sizeX, int sizeY){
-			look = new LookManager().getLook(refer, canvas);
+			look = new ViewManager().getLook(refer, canvas);
 		this.x = x;
 		this.y = y;
 		this.vx = vx;

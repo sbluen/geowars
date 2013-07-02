@@ -136,10 +136,10 @@ public class Database{
 			}//finish entire input file, vector created.
 		}
 		catch(FileNotFoundException e){
-			infile.close();
 			return false;
 		}
 		catch(Exception e){
+			e.printStackTrace();
 			infile.close();
 			return false;
 		}
@@ -199,10 +199,10 @@ public class Database{
 			return true;
 		}
 		catch(FileNotFoundException e){
-			infile.close();
 			return false;
 		}
 		catch(Exception e){
+			e.printStackTrace();
 			infile.close();
 			return false;
 		}

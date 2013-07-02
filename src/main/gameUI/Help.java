@@ -11,6 +11,8 @@ import javax.swing.JLabel;
  * @author Yunsik Choi group G3
  * 
  */
+
+@SuppressWarnings("serial")
 public class Help extends JFrame{
 	private Container c;
 	private JLabel[] docLbl;

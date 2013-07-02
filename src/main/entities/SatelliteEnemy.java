@@ -31,7 +31,7 @@ public class SatelliteEnemy extends Enemy {
 		super(axis.getX()+r*Math.cos(theta),
 				axis.getY()+r*Math.sin(theta),
 				canvas, 0, 0, 0, sizeX, sizeY);
-		look = new LookManager().getLook(refer, canvas);
+		look = new ViewManager().getLook(refer, canvas);
 		this.theta=theta;
 		this.vtheta=vtheta;
 		this.r=r;

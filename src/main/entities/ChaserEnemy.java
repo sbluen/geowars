@@ -3,8 +3,6 @@ import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import main.gameData.AngleCalculator;  //This will be used later.
-
 /**This is a type of enemy that chases the player.
  *  The player will be trying to eliminate these
  *   objects as the objective of the game.
@@ -12,7 +10,6 @@ import main.gameData.AngleCalculator;  //This will be used later.
  *
  */
 public class ChaserEnemy extends Enemy {
-	private double maxSpeed;
 	private String refer = "resources/enemy2.png";
 	private Entity player;  //holds the coordinates of the player that this
 						    //enemy chases
@@ -35,7 +32,7 @@ public class ChaserEnemy extends Enemy {
 	public ChaserEnemy(double x, double y, Canvas canvas, double vx,
 			double vy, double maxSpeed, int sizeX, int sizeY, Entity player){
 		super(x, y, canvas, vx, vy, maxSpeed, sizeX, sizeY);
-		look = new LookManager().getLook(refer, canvas);
+		look = new ViewManager().getLook(refer, canvas);
 		this.player=player;
 		v=Math.min(Math.sqrt(vx*vx+vy*vy), maxSpeed);
 		time=0;

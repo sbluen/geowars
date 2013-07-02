@@ -1,8 +1,5 @@
 package main.entities;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.Canvas;
 
 /**PowerUp is a class to represent all of the objects collected by the player to give a certain kind of bonus.
@@ -38,12 +35,12 @@ public PowerUp(String type,Canvas canvas,double x, double y)
 	//Also intialize the look objects here depending on the type
 	if (type.equals("Life")){
 		amount = 20;
-		look = new LookManager().getLook("resources/LifePowerUp.png", canvas);
+		look = new ViewManager().getLook("resources/LifePowerUp.png", canvas);
 	}
 
 	if (type.equals("Score")){
 		amount = 50;
-		look = new LookManager().getLook("resources/ScorePowerUp.png", canvas);
+		look = new ViewManager().getLook("resources/ScorePowerUp.png", canvas);
 		
 	}
 	

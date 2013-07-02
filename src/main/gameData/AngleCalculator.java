@@ -19,10 +19,8 @@ public class AngleCalculator{
 	 */
 	public static double calculateAngle(Entity entity, MouseEvent e)
 	{
-		double radius;       //distance from player to mouse	
 		double dx;
 		double dy;
-		double dtheta;
 		int mouseX;	//x coordinate of the mouse
 		int mouseY; //y coordinate of the mouse
 				
@@ -64,10 +62,8 @@ public class AngleCalculator{
 	 */
 	public static double calculateAngle(Entity entity, int mouseX, int mouseY)
 	{
-		double radius;       //distance from player to mouse	
 		double dx;
 		double dy;
-		double dtheta;
 	
 		dx = mouseX-entity.getX();
 		dy = mouseY-entity.getY();
