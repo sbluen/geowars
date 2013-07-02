@@ -173,17 +173,17 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 	
 	/** Shows the player that he/she can move onto next level */
 	public void nextLevel(){
-		gameLbl.setText("Next Level?");
+		gameLbl.setText("Next Level available");
 	}
 	
 	/** Shows the player that the game is paused */
 	public void paused(){
-		gameLbl.setText("Paused! Press \'P\' to Resume.");
+		gameLbl.setText("Paused. Press \'P\' to Resume.");
 	}
 	
 	/** Shows the player that the game is going on */
 	public void playing(){
-		gameLbl.setText("Let's Go!");
+		gameLbl.setText("");
 	}
 	
 	/** Shows the player's life when the new game starts */ 
@@ -263,7 +263,7 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 						Database.emptyVectors();
 						Record.mostRecentPlayerName = "";
 						JOptionPane.showMessageDialog(null, "No record exists.\n"
-								+"Load new game");
+								+"Load a new game");
 					}
 					else{ //data exists
 						Database.readData();
@@ -271,14 +271,12 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 							if(Record.playerLife == 0){
 								Database.emptyVectors();
 								Record.mostRecentPlayerName = "";
-								JOptionPane.showMessageDialog(null, "No remaining player's life.\n"
-											+"Load new game");		
+								JOptionPane.showMessageDialog(null, "That player is destroyed.\n"
+											+"Load a new game");		
 							}
 							else{
 								Database.emptyVectors();
 								Record.playername = Record.mostRecentPlayerName;
-								JOptionPane.showMessageDialog(null, 
-									"Game is now reloaded. Enjoy the game!");
 								Record.loadGame = true;
 							}
 						}//end if

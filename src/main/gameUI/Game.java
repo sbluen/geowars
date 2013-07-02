@@ -81,7 +81,7 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 	private JFrame frame;
 	private JPanel gamePanel, submenuPanel;
 	
-	public Game(){
+	Game(){
 		frame = new JFrame("Space Invaders");
 		frame.setSize(FRAME_W, FRAME_H);
 		/* Close, X is disabled */
