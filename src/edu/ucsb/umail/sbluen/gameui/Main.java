@@ -1,7 +1,7 @@
-package main.gameUI;
+package edu.ucsb.umail.sbluen.gameui;
 
-import main.gameData.Record;
-import main.gameUI.Game;
+import edu.ucsb.umail.sbluen.gamedata.Record;
+import edu.ucsb.umail.sbluen.gameui.Game;
 
 /**
  * 

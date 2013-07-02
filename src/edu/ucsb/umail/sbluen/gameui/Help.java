@@ -1,4 +1,4 @@
-package main.gameUI;
+package edu.ucsb.umail.sbluen.gameui;
 
 import java.awt.Container;
 import java.awt.Color;

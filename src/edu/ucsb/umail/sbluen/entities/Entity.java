@@ -1,4 +1,4 @@
-package main.entities;
+package edu.ucsb.umail.sbluen.entities;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 

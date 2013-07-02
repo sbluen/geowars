@@ -1,4 +1,4 @@
-package main.gameUI;
+package edu.ucsb.umail.sbluen.gameui;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
@@ -14,19 +14,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
 
-import main.entities.ChaserEnemy;
-import main.entities.Enemy;
-import main.entities.Entity;
-import main.entities.Missile;
-import main.entities.PlaceholderEnemy;
-import main.entities.Player;
-import main.entities.SatelliteEnemy;
-import main.gameData.AngleCalculator;
-import main.gameData.Record;
-import main.gameData.Sound;
-import main.gameUI.SubMenu;
-import main.entities.ShooterEnemy;
-import main.entities.PowerUp;
+import edu.ucsb.umail.sbluen.entities.ChaserEnemy;
+import edu.ucsb.umail.sbluen.entities.Enemy;
+import edu.ucsb.umail.sbluen.entities.Entity;
+import edu.ucsb.umail.sbluen.entities.Missile;
+import edu.ucsb.umail.sbluen.entities.PlaceholderEnemy;
+import edu.ucsb.umail.sbluen.entities.Player;
+import edu.ucsb.umail.sbluen.entities.PowerUp;
+import edu.ucsb.umail.sbluen.entities.SatelliteEnemy;
+import edu.ucsb.umail.sbluen.entities.ShooterEnemy;
+import edu.ucsb.umail.sbluen.gamedata.AngleCalculator;
+import edu.ucsb.umail.sbluen.gamedata.Record;
+import edu.ucsb.umail.sbluen.gamedata.Sound;
+import edu.ucsb.umail.sbluen.gameui.SubMenu;
+
 
 /**This class is essentially the main class that is executed.
  *  The Game object contains the objects displayed 
@@ -600,33 +601,4 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 		if(e.getButton() == MouseEvent.BUTTON1)
 			shootingPressed = false;
 	}
-	
-	/**The main method.
-	 * Put in this class because it makes things simpler
-	 * @param args does nothing for now.
-	 */
-	public static void main(String[] args){
-		Game game = new Game();
-		
-		/* Makes sure be ready to load game */
-		while(!Record.loadGame);
-						
-		/* Loads a new game for a new user and a returning user */
-		if(Record.loadNewGame)
-			game.newGame();
-				
-		/* Reloads the game for a returning user */
-		else if(Record.loadResume){
-			game.submenu.updateLevelLabel();
-			game.submenu.updateScoreLabel();
-			game.initEntitiesResume();
-		}
-			
-		game.submenu.setLoadBtnEnabled(false); /* Load button is no longer needed */
-		game.submenu.setRadioEnabled(false); /*Only works with the load button */
-		Record.beforeLoading = false;
-		game.requestFocus();
-		while(true)
-			game.gameLoop();
-	} //end of main()
 }

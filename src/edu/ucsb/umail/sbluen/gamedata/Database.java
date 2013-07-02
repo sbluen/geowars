@@ -1,4 +1,4 @@
-package main.gameData;
+package edu.ucsb.umail.sbluen.gamedata;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package main.gameUI;
+package edu.ucsb.umail.sbluen.gameui;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,9 +16,10 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import main.gameData.Record;
-import main.gameData.Database;
-import main.gameData.PlayerInfo;
+import edu.ucsb.umail.sbluen.gamedata.Database;
+import edu.ucsb.umail.sbluen.gamedata.PlayerInfo;
+import edu.ucsb.umail.sbluen.gamedata.Record;
+
 
 /**This is the sub-menu that goes below the game field.
  * 

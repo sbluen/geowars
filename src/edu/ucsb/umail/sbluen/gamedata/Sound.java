@@ -1,4 +1,4 @@
-package main.gameData;
+package edu.ucsb.umail.sbluen.gamedata;
 import java.applet.Applet;
 import java.applet.AudioClip;
 

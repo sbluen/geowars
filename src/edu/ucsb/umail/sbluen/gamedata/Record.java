@@ -1,4 +1,4 @@
-package main.gameData;
+package edu.ucsb.umail.sbluen.gamedata;
 
 /** Stores static variables used for controlling the buttons in the sub-menu
  * and keeping track of player's record and game status and so on.

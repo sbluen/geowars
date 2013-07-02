@@ -1,6 +1,7 @@
-package main.gameData;
+package edu.ucsb.umail.sbluen.gamedata;
 import java.awt.event.MouseEvent;
-import main.entities.Entity;
+
+import edu.ucsb.umail.sbluen.entities.Entity;
 
 /**Calculates the angle for the an entity to face.
  * Uses the {@link Entity} class.
