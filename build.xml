@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 <!--Steven Bluen, group G3-->
 <project name="Space Invaders" basedir="." default="run">
+ <presetdef name="javac">
+    <javac includeantruntime="false" />
+ </presetdef>
 
     <property name="src.dir"     value="src"/>
     <property name="build.dir"   value="build"/>
