@@ -44,7 +44,7 @@ public class Missile extends Entity{
 			refer = "";
 		}
 		
-		look = new ViewManager().getLook(refer, c);
+		view = new ViewManager().getLook(refer, c);
 		this.x = x;
 		this.y = y;
 		this.vy = vy;
@@ -64,11 +64,9 @@ public class Missile extends Entity{
 	/** Returns the Entity that fired this missile object
 	 * 
 	 * @return The entity that fired this missile object
-	 * 
 	 */
 	public Entity getSource()
 	{
 		return Source;
 	}
-	
 }

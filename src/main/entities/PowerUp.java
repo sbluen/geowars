@@ -35,12 +35,12 @@ public PowerUp(String type,Canvas canvas,double x, double y)
 	//Also intialize the look objects here depending on the type
 	if (type.equals("Life")){
 		amount = 20;
-		look = new ViewManager().getLook("resources/LifePowerUp.png", canvas);
+		view = new ViewManager().getLook("resources/LifePowerUp.png", canvas);
 	}
 
 	if (type.equals("Score")){
 		amount = 50;
-		look = new ViewManager().getLook("resources/ScorePowerUp.png", canvas);
+		view = new ViewManager().getLook("resources/ScorePowerUp.png", canvas);
 		
 	}
 	

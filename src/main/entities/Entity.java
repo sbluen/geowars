@@ -16,7 +16,7 @@ public abstract class Entity {
 	/**Velocity variable.*/
 	protected double vx, vy, vtheta; //velocity
 	/**The sprite that this entity is to be drawn with.*/
-	protected View look;
+	protected View view;
 	/**A rectangle around this object, used for collision checking.*/
 	protected Rectangle thisRec = new Rectangle();
 	
@@ -126,17 +126,17 @@ public abstract class Entity {
 	
 	/**Uses the Look class to draw a sprite of this object.*/
 	public void draw(Graphics g){
-		look.draw(g, x, y, theta);
+		view.draw(g, x, y, theta);
 	}
 	
 	/**Determines if an Entity is colliding with this one.*/
 	public boolean collide(Entity other){
 		if (other instanceof PlaceholderEnemy) return false;
 		//implement pixel-based collision detection
-		thisRec.setBounds((int)x, (int)y, look.getWidth(), look.getHeight());
+		thisRec.setBounds((int)x, (int)y, view.getWidth(), view.getHeight());
 		Rectangle otherRec = new Rectangle();
 		otherRec.setBounds((int)other.x, (int)other.y, 
-				other.look.getWidth(), other.look.getHeight());
+				other.view.getWidth(), other.view.getHeight());
 		return thisRec.intersects(otherRec);
 	}
 	

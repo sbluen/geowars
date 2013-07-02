@@ -29,7 +29,7 @@ public class Enemy extends Entity {
 	 */
 	public Enemy(double x, double y, Canvas canvas,
 			double vx, double vy, double maxSpeed, int sizeX, int sizeY){
-			look = new ViewManager().getLook(refer, canvas);
+			view = new ViewManager().getLook(refer, canvas);
 		this.x = x;
 		this.y = y;
 		this.vx = vx;
@@ -43,12 +43,9 @@ public class Enemy extends Entity {
 	 *  
 	 * @return value The number of points this enemy object is worth
 	 */	
-	public int getValue(){
-		
+	public int getValue(){	
 		return value;
-		
 	}
-	
 	
 	/**This is the move method, which makes this enemy go back if
 	 *  it is outside the game area.
@@ -78,7 +75,6 @@ public class Enemy extends Entity {
 			
 				vx = Math.random()*maxSpeed;
 		        vx = vx - vx*2;
-			
 		}
 	}
 	
@@ -88,6 +84,6 @@ public class Enemy extends Entity {
 	@Override
 	public void draw(Graphics g){
 		Graphics2D g2 = (Graphics2D)g;
-		look.draw(g2, x, y, theta);
+		view.draw(g2, x, y, theta);
 	}
 }

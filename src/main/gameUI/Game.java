@@ -29,7 +29,7 @@ import main.entities.ShooterEnemy;
 import main.entities.PowerUp;
 
 /**This class is essentially the main class that is executed.
- *  Game contains the objects displayed 
+ *  The Game object contains the objects displayed 
  *  on the screen and displays/animates them.
  *  We made it also handle the user input.
  *
@@ -84,8 +84,6 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 	Game(){
 		frame = new JFrame("Space Invaders");
 		frame.setSize(FRAME_W, FRAME_H);
-		/* Close, X is disabled */
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 	    frame.setLayout(new BorderLayout());
 
 		/* Add Game panel */

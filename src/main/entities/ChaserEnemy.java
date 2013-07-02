@@ -32,7 +32,7 @@ public class ChaserEnemy extends Enemy {
 	public ChaserEnemy(double x, double y, Canvas canvas, double vx,
 			double vy, double maxSpeed, int sizeX, int sizeY, Entity player){
 		super(x, y, canvas, vx, vy, maxSpeed, sizeX, sizeY);
-		look = new ViewManager().getLook(refer, canvas);
+		view = new ViewManager().getLook(refer, canvas);
 		this.player=player;
 		v=Math.min(Math.sqrt(vx*vx+vy*vy), maxSpeed);
 		time=0;
@@ -69,6 +69,6 @@ public class ChaserEnemy extends Enemy {
 	@Override
 	public void draw(Graphics g){
 		Graphics2D g2 = (Graphics2D)g;
-		look.draw(g2, x, y, theta+Math.toRadians(90));
+		view.draw(g2, x, y, theta+Math.toRadians(90));
 	}
 }

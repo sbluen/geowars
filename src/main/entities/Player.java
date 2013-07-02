@@ -14,7 +14,7 @@ public class Player extends Entity {
 	 *
 	 */
 	public Player(String refer, double x, double y, Canvas canvas){
-		look = new ViewManager().getLook(refer, canvas);
+		view = new ViewManager().getLook(refer, canvas);
 		this.x = x;
 		this.y = y;
 	}

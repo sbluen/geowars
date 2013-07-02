@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
 
-/**This class is created by the LookManage class 
+/**This class is created by the ViewManage class 
  * to pass an image into an entity object so it can be displayed on the game screen.
  *  This class is responsible for drawing the object .
  *  

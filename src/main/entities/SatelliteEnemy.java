@@ -31,7 +31,7 @@ public class SatelliteEnemy extends Enemy {
 		super(axis.getX()+r*Math.cos(theta),
 				axis.getY()+r*Math.sin(theta),
 				canvas, 0, 0, 0, sizeX, sizeY);
-		look = new ViewManager().getLook(refer, canvas);
+		view = new ViewManager().getLook(refer, canvas);
 		this.theta=theta;
 		this.vtheta=vtheta;
 		this.r=r;
@@ -47,11 +47,11 @@ public class SatelliteEnemy extends Enemy {
 		x=axis.getX()+r*Math.cos(theta);
 		if (x<=0) x=0;
 		//I know that this doesn't work right but I don't know how to fix this.
-		if (x>=windowSizeX-look.getWidth()) x=windowSizeX-look.getWidth();
+		if (x>=windowSizeX-view.getWidth()) x=windowSizeX-view.getWidth();
 		y=axis.getY()+r*Math.sin(theta);
 		if (y<=0) y=0;
 		//I know that this doesn't work right but I don't know how to fix this.
-		if (y>=windowSizeX-look.getHeight()) x=windowSizeY-look.getHeight();
+		if (y>=windowSizeX-view.getHeight()) x=windowSizeY-view.getHeight();
 		theta+=n*vtheta;
 	}
 	
@@ -60,7 +60,7 @@ public class SatelliteEnemy extends Enemy {
 	 */	
 	public void draw(Graphics g){
 		Graphics2D g2 = (Graphics2D)g;
-		look.draw(g2, x, y, theta);
+		view.draw(g2, x, y, theta);
 	}	
 	
 	/**This method returns how much this enemy is worth when killed
