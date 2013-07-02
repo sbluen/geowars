@@ -78,9 +78,9 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 		
 		/* Add radio buttons for loading options */
 		gr = new CheckboxGroup();
-		loadNewGameRdo = new Checkbox("Load New Game?", true, gr); //default
+		loadNewGameRdo = new Checkbox("Load New Game", true, gr); //default
 		loadNewGameRdo.setFont(new Font("SansSerif", Font.BOLD, 15));
-		loadResumeRdo = new Checkbox("Resume Game?", false, gr);
+		loadResumeRdo = new Checkbox("Resume Game", false, gr);
 		loadResumeRdo.setFont(new Font("SansSerif", Font.BOLD, 15));
 		add(loadNewGameRdo);
 		add(loadResumeRdo);
@@ -144,7 +144,7 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 		add(Box.createRigidArea(new Dimension(2000, 0)));
 		
 		/* Add game label */
-		gameLbl = new JLabel("Let's Go!");
+		gameLbl = new JLabel("");
 		gameLbl.setFont(new Font("Verdana", Font.BOLD, 25));
 		gameLbl.setForeground(Color.magenta);
 		add(gameLbl);
@@ -168,7 +168,7 @@ public class SubMenu extends JComponent implements ActionListener, ItemListener{
 	
 	/**Shows the player that the game is over.*/
 	public void gameOver(){
-		gameLbl.setText("Game Over! New Game?");
+		gameLbl.setText("Game Over. New Game?");
 	}
 	
 	/** Shows the player that he/she can move onto next level */
