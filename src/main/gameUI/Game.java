@@ -24,6 +24,7 @@ import main.entities.SatelliteEnemy;
 import main.gameData.AngleCalculator;
 import main.gameData.Record;
 import main.gameData.Sound;
+import main.gameUI.SubMenu;
 import main.entities.ShooterEnemy;
 import main.entities.PowerUp;
 
@@ -75,11 +76,11 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 	/* Sound variables */
 	private Sound shootingSound, gameOverSound, scoreSound;
 	
-	private SubMenu submenu;
+	SubMenu submenu;
 	private JFrame frame;
 	private JPanel gamePanel, submenuPanel;
 	
-	private Game(){
+	public Game(){
 		frame = new JFrame("Space Invaders");
 		frame.setSize(FRAME_W, FRAME_H);
 		/* Close, X is disabled */
@@ -129,7 +130,7 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 		scoreSound = new Sound("score");
 	}
 	
-	private void newGame(){
+	void newGame(){
 		requestFocus();
 		Record.playing = true;
 		entities.removeAllElements();
@@ -153,7 +154,7 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 	}
 
 	/* The main game loop running during all game play */
-	private void gameLoop(){
+	void gameLoop(){
 		long lastLoopTime = System.currentTimeMillis();
 		Graphics2D g2;
 		Entity entity;
@@ -412,7 +413,7 @@ public class Game extends Canvas implements KeyListener, MouseInputListener{
 	}
 	
 	/* Initializes enemies when a user resumes the game */
-	private void initEntitiesResume(){
+	void initEntitiesResume(){
 		numOfEnemies=10;
 		for (int i=2; i<=Record.level+1; i++){
 			numOfEnemies+=i;

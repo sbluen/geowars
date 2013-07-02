@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--Steven Bluen, group G3-->
-<project name="Space Invaders" basedir="." default="clean-build">
+<project name="Space Invaders" basedir="." default="run">
 
     <property name="src.dir"     value="src"/>
     <property name="build.dir"   value="build"/>
