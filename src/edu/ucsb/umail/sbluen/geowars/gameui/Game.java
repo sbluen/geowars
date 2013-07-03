@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gameui;
+package edu.ucsb.umail.sbluen.geowars.gameui;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
@@ -14,19 +14,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
 
-import edu.ucsb.umail.sbluen.entities.ChaserEnemy;
-import edu.ucsb.umail.sbluen.entities.Enemy;
-import edu.ucsb.umail.sbluen.entities.Entity;
-import edu.ucsb.umail.sbluen.entities.Missile;
-import edu.ucsb.umail.sbluen.entities.PlaceholderEnemy;
-import edu.ucsb.umail.sbluen.entities.Player;
-import edu.ucsb.umail.sbluen.entities.PowerUp;
-import edu.ucsb.umail.sbluen.entities.SatelliteEnemy;
-import edu.ucsb.umail.sbluen.entities.ShooterEnemy;
-import edu.ucsb.umail.sbluen.gamedata.AngleCalculator;
-import edu.ucsb.umail.sbluen.gamedata.Record;
-import edu.ucsb.umail.sbluen.gamedata.Sound;
-import edu.ucsb.umail.sbluen.gameui.SubMenu;
+import edu.ucsb.umail.sbluen.geowars.entities.ChaserEnemy;
+import edu.ucsb.umail.sbluen.geowars.entities.Enemy;
+import edu.ucsb.umail.sbluen.geowars.entities.Entity;
+import edu.ucsb.umail.sbluen.geowars.entities.Missile;
+import edu.ucsb.umail.sbluen.geowars.entities.PlaceholderEnemy;
+import edu.ucsb.umail.sbluen.geowars.entities.Player;
+import edu.ucsb.umail.sbluen.geowars.entities.PowerUp;
+import edu.ucsb.umail.sbluen.geowars.entities.SatelliteEnemy;
+import edu.ucsb.umail.sbluen.geowars.entities.ShooterEnemy;
+import edu.ucsb.umail.sbluen.geowars.gamedata.AngleCalculator;
+import edu.ucsb.umail.sbluen.geowars.gamedata.Record;
+import edu.ucsb.umail.sbluen.geowars.gamedata.Sound;
+import edu.ucsb.umail.sbluen.geowars.gameui.SubMenu;
 
 
 /**This class is essentially the main class that is executed.

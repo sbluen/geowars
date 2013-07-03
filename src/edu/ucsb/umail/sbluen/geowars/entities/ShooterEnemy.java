@@ -1,9 +1,9 @@
-package edu.ucsb.umail.sbluen.entities;
+package edu.ucsb.umail.sbluen.geowars.entities;
 import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import edu.ucsb.umail.sbluen.gamedata.AngleCalculator;
+import edu.ucsb.umail.sbluen.geowars.gamedata.AngleCalculator;
 
 //Daryl Hennegan
 //5-17-09

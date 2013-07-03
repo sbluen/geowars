@@ -10,7 +10,8 @@
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="dist"/>
 	<property name="rsrc.dir"    value="resources"/>
-    <property name="main-class"  value="edu.ucsb.umail.sbluen.gameui.Game"/>
+	<property name="package.root"value="edu.ucsb.umail.sbluen.geowars"/>
+    <property name="main-class"  value="${package.root}.gameui.Main"/>
 
 
 	
@@ -49,7 +50,7 @@
   	  <mkdir dir="build/javadocs"/>
   	  <javadoc author="true"
    	  	destdir="build/javadocs"
- 	  	packagenames="main.*" 
+ 	  	packagenames="${package.root}.*" 
    	  	sourcepath="src"
   	  	link="http://java.sun.com/j2se/1.5.0/docs/api/"
  	  />

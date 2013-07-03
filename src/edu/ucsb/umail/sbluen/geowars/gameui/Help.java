@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gameui;
+package edu.ucsb.umail.sbluen.geowars.gameui;
 
 import java.awt.Container;
 import java.awt.Color;

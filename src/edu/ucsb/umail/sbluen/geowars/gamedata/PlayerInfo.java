@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gamedata;
+package edu.ucsb.umail.sbluen.geowars.gamedata;
 
 /** Contains a current player's record.
  * They are player's name, score, level, and remaining life. 

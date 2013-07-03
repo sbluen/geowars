@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gameui;
+package edu.ucsb.umail.sbluen.geowars.gameui;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,9 +16,9 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import edu.ucsb.umail.sbluen.gamedata.Database;
-import edu.ucsb.umail.sbluen.gamedata.PlayerInfo;
-import edu.ucsb.umail.sbluen.gamedata.Record;
+import edu.ucsb.umail.sbluen.geowars.gamedata.Database;
+import edu.ucsb.umail.sbluen.geowars.gamedata.PlayerInfo;
+import edu.ucsb.umail.sbluen.geowars.gamedata.Record;
 
 
 /**This is the sub-menu that goes below the game field.

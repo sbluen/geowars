@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.entities;
+package edu.ucsb.umail.sbluen.geowars.entities;
 import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Graphics2D;

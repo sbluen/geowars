@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gamedata;
+package edu.ucsb.umail.sbluen.geowars.gamedata;
 
 import java.io.File;
 import java.io.FileNotFoundException;

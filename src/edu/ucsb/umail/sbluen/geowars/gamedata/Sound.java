@@ -1,4 +1,4 @@
-package edu.ucsb.umail.sbluen.gamedata;
+package edu.ucsb.umail.sbluen.geowars.gamedata;
 import java.applet.Applet;
 import java.applet.AudioClip;
 

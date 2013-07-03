@@ -1,7 +1,7 @@
-package edu.ucsb.umail.sbluen.gameui;
+package edu.ucsb.umail.sbluen.geowars.gameui;
 
-import edu.ucsb.umail.sbluen.gamedata.Record;
-import edu.ucsb.umail.sbluen.gameui.Game;
+import edu.ucsb.umail.sbluen.geowars.gamedata.Record;
+import edu.ucsb.umail.sbluen.geowars.gameui.Game;
 
 /**
  * 
