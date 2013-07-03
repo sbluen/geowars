@@ -10,7 +10,7 @@
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="dist"/>
 	<property name="rsrc.dir"    value="resources"/>
-	<property name="kg.root"     value="edu.ucsb.umail.sbluen.geowars"/>
+	<property name="pkg.root"     value="edu.ucsb.umail.sbluen.geowars"/>
     <property name="main-class"  value="${pkg.root}.gameui.Main"/>
 
 
@@ -52,6 +52,7 @@
    	  	destdir="build/javadocs"
  	  	packagenames="${pkg.root}.*" 
    	  	sourcepath="src"
+   	  	overview="src/overview.html"
   	  	link="http://java.sun.com/j2se/1.5.0/docs/api/"
  	  />
   	    <condition property="condition">
